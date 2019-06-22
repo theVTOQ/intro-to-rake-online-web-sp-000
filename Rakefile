@@ -29,7 +29,7 @@ namespace :db do
           grade INTEGER);
     SQL
 
-    DB[:conn].execute(sql, "students")
+    DB[:conn].execute(sql, 'students')
   end
 
   task :seed => :migrate do
