@@ -31,7 +31,7 @@ namespace :db do
     DB[:conn].execute(sql, "students")
   end
 
-  task :seed => :migrate
+  task :seed => :migrate do
     require_relative "./db/seeds.rb"
   end
 end
