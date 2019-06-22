@@ -25,9 +25,10 @@ namespace :db do
     sql = <<-SQL CREATE TABLE students (
         id INTEGER PRIMARY KEY,
         name TEXT,
-        grade INTEGER
-    );
+        grade INTEGER);
     SQL
+
+    DB[:conn].execute(sql)
   end
 
   task :seed => :migrate
