@@ -29,4 +29,8 @@ namespace :db do
     );
     SQL
   end
+
+  task :seed => :migrate
+    require_relative "./db/seeds.rb"
+  end
 end
