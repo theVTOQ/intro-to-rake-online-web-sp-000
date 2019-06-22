@@ -22,10 +22,11 @@ end
 namespace :db do
   desc 'migrate changes to your database'
   task :migrate => :environment do
-    sql = <<-SQL CREATE TABLE ? (
-        id INTEGER PRIMARY KEY,
-        name TEXT,
-        grade INTEGER);
+    sql = <<-SQL
+        CREATE TABLE ? (
+          id INTEGER PRIMARY KEY,
+          name TEXT,
+          grade INTEGER);
     SQL
 
     DB[:conn].execute(sql, "students")
