@@ -22,6 +22,9 @@ end
 namespace :db do
   desc 'migrate changes to your database'
   task :migrate => :environment do
-
+    sql = <<-SQL CREATE TABLE students (
+        id INTEGER PRIMARY KEY
+    );
+    SQL
   end
 end
