@@ -14,10 +14,10 @@ namespace :greeting do
 end
 
 desc 'drop into the pry console'
-  task :console => :environment do
-    Pry.start
-  end
+task :console => :environment do
+  Pry.start
 end
+
 
 namespace :db do
   desc 'migrate changes to your database'
